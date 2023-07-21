@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 
 class SolveViewModel : ViewModel() {
 
-    private val repository= SolveRepository(RetrofitService.create(false,""))
+    private val repository= SolveRepository(RetrofitService.create())
 
     val solveResponse = MutableStateFlow(ApiState(Status.NONE,ResponseModel(),""))
 

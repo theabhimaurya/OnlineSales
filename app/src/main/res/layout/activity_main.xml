@@ -7,6 +7,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/filledTextFieldExpression"
         android:layout_width="match_parent"
@@ -23,16 +24,36 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/black"
-        android:text="Evaluate"
-        android:layout_gravity="end"
-        android:textColor="@color/white"
-        android:layout_marginHorizontal="16dp" />
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/button_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="1"
+            android:backgroundTint="#009688"
+            android:layout_marginHorizontal="16dp"
+            android:textColor="@color/white"
+            android:text="History" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="Evaluate"
+            android:layout_weight="1"
+            android:layout_gravity="end"
+            android:textColor="@color/white"
+            android:layout_marginHorizontal="16dp" />
+    </LinearLayout>
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_result"
@@ -42,6 +63,8 @@
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_marginHorizontal="16dp" />
+
+
 
 
 </LinearLayout>
